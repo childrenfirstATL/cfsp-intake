@@ -319,7 +319,7 @@ nav {
 .choice-item:hover { border-color: var(--forest-mid); background: white; }
 .choice-item.selected { border-color: var(--forest-mid); background: var(--forest-pale); }
 .choice-item input { margin-top: 2px; accent-color: var(--forest); flex-shrink: 0; }
-.choice-item label { font-size: 14px; color: var(--warm-dark); cursor: pointer; line-height: 1.4; }
+.choice-item label, .choice-item span { font-size: 14px; color: var(--warm-dark); cursor: pointer; line-height: 1.4; }
 
 /* Party roster */
 .roster-category {
@@ -663,24 +663,24 @@ footer strong { color: rgba(250,247,242,0.7); }
             <div class="field">
               <label>Best way to reach you <span class="req">*</span></label>
               <div class="choice-group" id="q_contact_pref" style="flex-direction:row;flex-wrap:wrap;gap:8px;">
-                <label class="choice-item" style="flex:1;min-width:120px;"><input type="checkbox" name="q_contact" value="email"><label>Email</label></label>
-                <label class="choice-item" style="flex:1;min-width:120px;"><input type="checkbox" name="q_contact" value="call"><label>Phone call</label></label>
-                <label class="choice-item" style="flex:1;min-width:120px;"><input type="checkbox" name="q_contact" value="text"><label>Text message</label></label>
+                <label class="choice-item" style="flex:1;min-width:120px;"><input type="checkbox" name="q_contact" value="email"><span>Email</span></label>
+                <label class="choice-item" style="flex:1;min-width:120px;"><input type="checkbox" name="q_contact" value="call"><span>Phone call</span></label>
+                <label class="choice-item" style="flex:1;min-width:120px;"><input type="checkbox" name="q_contact" value="text"><span>Text message</span></label>
               </div>
             </div>
           </div>
           <div class="field">
             <label>Messaging consent <span class="req">*</span></label>
             <div class="choice-group">
-              <label class="choice-item"><input type="checkbox" id="q_sms_consent" name="q_sms_consent" value="yes"><label>I consent to receive text messages from Children First Atlanta regarding my case intake, session scheduling, and program updates. Message and data rates may apply. You may opt out at any time by replying STOP.</label></label>
+              <label class="choice-item"><input type="checkbox" id="q_sms_consent" name="q_sms_consent" value="yes"><span>I consent to receive text messages from Children First Atlanta regarding my case intake, session scheduling, and program updates. Message and data rates may apply. You may opt out at any time by replying STOP.</span></label>
             </div>
           </div>
 
           <div class="field">
             <label>Is your custody case in the state of Georgia? <span class="req">*</span></label>
             <div class="choice-group" id="q_georgia">
-              <label class="choice-item"><input type="radio" name="q_georgia" value="yes"><label>Yes — my case is in Georgia</label></label>
-              <label class="choice-item"><input type="radio" name="q_georgia" value="no"><label>No — my case is in another state</label></label>
+              <label class="choice-item"><input type="radio" name="q_georgia" value="yes"><span>Yes — my case is in Georgia</span></label>
+              <label class="choice-item"><input type="radio" name="q_georgia" value="no"><span>No — my case is in another state</span></label>
             </div>
             <div id="georgia-warning" style="display:none;margin-top:10px;padding:12px 16px;background:var(--amber-light);border-left:3px solid var(--amber);border-radius:4px;font-size:13px;color:var(--warm-mid);line-height:1.5;">
               We are currently focused on Georgia family courts only. We are not yet able to serve families in other states, but hope to expand in the future. Thank you for your interest in CFSP.
@@ -695,32 +695,32 @@ footer strong { color: rgba(250,247,242,0.7); }
           <div class="field">
             <label>Current status of your case <span class="req">*</span></label>
             <div class="choice-group" id="q4">
-              <label class="choice-item"><input type="radio" name="q4" value="active-hearing"><label>Active litigation — hearing scheduled</label></label>
-              <label class="choice-item"><input type="radio" name="q4" value="active-no-hearing"><label>Active litigation — no hearing scheduled yet</label></label>
-              <label class="choice-item"><input type="radio" name="q4" value="order-modification"><label>Order in place — seeking modification</label></label>
-              <label class="choice-item"><input type="radio" name="q4" value="order-compliance"><label>Order in place — compliance issues</label></label>
-              <label class="choice-item"><input type="radio" name="q4" value="pre-litigation"><label>Pre-litigation — no filing yet</label></label>
-              <label class="choice-item"><input type="radio" name="q4" value="appeal"><label>Appeal in progress</label></label>
+              <label class="choice-item"><input type="radio" name="q4" value="active-hearing"><span>Active litigation — hearing scheduled</span></label>
+              <label class="choice-item"><input type="radio" name="q4" value="active-no-hearing"><span>Active litigation — no hearing scheduled yet</span></label>
+              <label class="choice-item"><input type="radio" name="q4" value="order-modification"><span>Order in place — seeking modification</span></label>
+              <label class="choice-item"><input type="radio" name="q4" value="order-compliance"><span>Order in place — compliance issues</span></label>
+              <label class="choice-item"><input type="radio" name="q4" value="pre-litigation"><span>Pre-litigation — no filing yet</span></label>
+              <label class="choice-item"><input type="radio" name="q4" value="appeal"><span>Appeal in progress</span></label>
             </div>
           </div>
 
           <div class="field">
             <label>Do you currently have an attorney? <span class="req">*</span></label>
             <div class="choice-group" id="q5">
-              <label class="choice-item"><input type="radio" name="q5" value="yes-full"><label>Yes — fully represented</label></label>
-              <label class="choice-item"><input type="radio" name="q5" value="yes-limited"><label>Yes — limited scope representation</label></label>
-              <label class="choice-item"><input type="radio" name="q5" value="no-self"><label>No — self-represented</label></label>
-              <label class="choice-item"><input type="radio" name="q5" value="no-prev"><label>No — previously had an attorney</label></label>
+              <label class="choice-item"><input type="radio" name="q5" value="yes-full"><span>Yes — fully represented</span></label>
+              <label class="choice-item"><input type="radio" name="q5" value="yes-limited"><span>Yes — limited scope representation</span></label>
+              <label class="choice-item"><input type="radio" name="q5" value="no-self"><span>No — self-represented</span></label>
+              <label class="choice-item"><input type="radio" name="q5" value="no-prev"><span>No — previously had an attorney</span></label>
             </div>
           </div>
 
           <div class="field">
             <label>Is there a Guardian ad Litem appointed? <span class="req">*</span></label>
             <div class="choice-group" id="q6">
-              <label class="choice-item"><input type="radio" name="q6" value="yes-current"><label>Yes — currently appointed</label></label>
-              <label class="choice-item"><input type="radio" name="q6" value="yes-prev"><label>Yes — previously appointed, no longer active</label></label>
-              <label class="choice-item"><input type="radio" name="q6" value="no"><label>No</label></label>
-              <label class="choice-item"><input type="radio" name="q6" value="unknown"><label>Unknown</label></label>
+              <label class="choice-item"><input type="radio" name="q6" value="yes-current"><span>Yes — currently appointed</span></label>
+              <label class="choice-item"><input type="radio" name="q6" value="yes-prev"><span>Yes — previously appointed, no longer active</span></label>
+              <label class="choice-item"><input type="radio" name="q6" value="no"><span>No</span></label>
+              <label class="choice-item"><input type="radio" name="q6" value="unknown"><span>Unknown</span></label>
             </div>
           </div>
 
@@ -732,12 +732,12 @@ footer strong { color: rgba(250,247,242,0.7); }
           <div class="field">
             <label>What do you most need help with for your child? Select all that apply. <span class="req">*</span></label>
             <div class="choice-group">
-              <label class="choice-item"><input type="checkbox" name="q8" value="organize"><label>Organize my evidence</label></label>
-              <label class="choice-item"><input type="checkbox" name="q8" value="patterns"><label>Surface any patterns in the other parent's documented behavior</label></label>
-              <label class="choice-item"><input type="checkbox" name="q8" value="hearing"><label>Prepare for an upcoming hearing</label></label>
-              <label class="choice-item"><input type="checkbox" name="q8" value="modification"><label>Support a modification filing</label></label>
-              <label class="choice-item"><input type="checkbox" name="q8" value="gal"><label>Respond to a GAL report or recommendation</label></label>
-              <label class="choice-item"><input type="checkbox" name="q8" value="violations"><label>Document violations of the current order</label></label>
+              <label class="choice-item"><input type="checkbox" name="q8" value="organize"><span>Organize my evidence</span></label>
+              <label class="choice-item"><input type="checkbox" name="q8" value="patterns"><span>Surface any patterns in the other parent's documented behavior</span></label>
+              <label class="choice-item"><input type="checkbox" name="q8" value="hearing"><span>Prepare for an upcoming hearing</span></label>
+              <label class="choice-item"><input type="checkbox" name="q8" value="modification"><span>Support a modification filing</span></label>
+              <label class="choice-item"><input type="checkbox" name="q8" value="gal"><span>Respond to a GAL report or recommendation</span></label>
+              <label class="choice-item"><input type="checkbox" name="q8" value="violations"><span>Document violations of the current order</span></label>
             </div>
           </div>
         </div>
@@ -772,39 +772,39 @@ footer strong { color: rgba(250,247,242,0.7); }
           <div class="field">
             <label>How do you and the other parent communicate? Select all that apply. <span class="req">*</span></label>
             <div class="choice-group">
-              <label class="choice-item"><input type="checkbox" name="q10" value="text"><label>Text messages directly</label></label>
-              <label class="choice-item"><input type="checkbox" name="q10" value="email"><label>Email directly</label></label>
-              <label class="choice-item"><input type="checkbox" name="q10" value="third-party"><label>Through a third party or family member</label></label>
-              <label class="choice-item"><input type="checkbox" name="q10" value="attorney"><label>Through an attorney</label></label>
-              <label class="choice-item"><input type="checkbox" name="q10" value="platform"><label>Co-parenting platform (OFW, TalkingParents, AppClose)</label></label>
+              <label class="choice-item"><input type="checkbox" name="q10" value="text"><span>Text messages directly</span></label>
+              <label class="choice-item"><input type="checkbox" name="q10" value="email"><span>Email directly</span></label>
+              <label class="choice-item"><input type="checkbox" name="q10" value="third-party"><span>Through a third party or family member</span></label>
+              <label class="choice-item"><input type="checkbox" name="q10" value="attorney"><span>Through an attorney</span></label>
+              <label class="choice-item"><input type="checkbox" name="q10" value="platform"><span>Co-parenting platform (OFW, TalkingParents, AppClose)</span></label>
             </div>
           </div>
 
           <div class="field">
             <label>What documents do you have? Select all that apply. <span class="req">*</span></label>
             <div class="choice-group">
-              <label class="choice-item"><input type="checkbox" name="q13" value="current-order"><label>Current custody order or parenting plan</label></label>
-              <label class="choice-item"><input type="checkbox" name="q13" value="prior-orders"><label>Prior custody orders or modifications</label></label>
-              <label class="choice-item"><input type="checkbox" name="q13" value="temp-orders"><label>Temporary orders</label></label>
-              <label class="choice-item"><input type="checkbox" name="q13" value="transcripts"><label>Court hearing transcripts</label></label>
-              <label class="choice-item"><input type="checkbox" name="q13" value="gal-report"><label>GAL report or recommendations</label></label>
-              <label class="choice-item"><input type="checkbox" name="q13" value="emails"><label>Emails</label></label>
-              <label class="choice-item"><input type="checkbox" name="q13" value="school"><label>School records or communications</label></label>
-              <label class="choice-item"><input type="checkbox" name="q13" value="medical"><label>Medical records or appointment notes</label></label>
-              <label class="choice-item"><input type="checkbox" name="q13" value="therapy"><label>Therapy or counseling session notes or transcripts</label></label>
-              <label class="choice-item"><input type="checkbox" name="q13" value="audio"><label>Audio recordings — voicemails, call recordings, in-person recordings</label></label>
-              <label class="choice-item"><input type="checkbox" name="q13" value="social-media"><label>Social media posts or screenshots</label></label>
-              <label class="choice-item"><input type="checkbox" name="q13" value="third-party-comms"><label>Communications through a third party</label></label>
+              <label class="choice-item"><input type="checkbox" name="q13" value="current-order"><span>Current custody order or parenting plan</span></label>
+              <label class="choice-item"><input type="checkbox" name="q13" value="prior-orders"><span>Prior custody orders or modifications</span></label>
+              <label class="choice-item"><input type="checkbox" name="q13" value="temp-orders"><span>Temporary orders</span></label>
+              <label class="choice-item"><input type="checkbox" name="q13" value="transcripts"><span>Court hearing transcripts</span></label>
+              <label class="choice-item"><input type="checkbox" name="q13" value="gal-report"><span>GAL report or recommendations</span></label>
+              <label class="choice-item"><input type="checkbox" name="q13" value="emails"><span>Emails</span></label>
+              <label class="choice-item"><input type="checkbox" name="q13" value="school"><span>School records or communications</span></label>
+              <label class="choice-item"><input type="checkbox" name="q13" value="medical"><span>Medical records or appointment notes</span></label>
+              <label class="choice-item"><input type="checkbox" name="q13" value="therapy"><span>Therapy or counseling session notes or transcripts</span></label>
+              <label class="choice-item"><input type="checkbox" name="q13" value="audio"><span>Audio recordings — voicemails, call recordings, in-person recordings</span></label>
+              <label class="choice-item"><input type="checkbox" name="q13" value="social-media"><span>Social media posts or screenshots</span></label>
+              <label class="choice-item"><input type="checkbox" name="q13" value="third-party-comms"><span>Communications through a third party</span></label>
             </div>
           </div>
 
           <div class="field">
             <label>Roughly how many total documents? <span class="req">*</span></label>
             <div class="choice-group">
-              <label class="choice-item"><input type="radio" name="q15" value="under10"><label>Fewer than 10</label></label>
-              <label class="choice-item"><input type="radio" name="q15" value="10-30"><label>10–30</label></label>
-              <label class="choice-item"><input type="radio" name="q15" value="30-75"><label>30–75</label></label>
-              <label class="choice-item"><input type="radio" name="q15" value="over75"><label>More than 75</label></label>
+              <label class="choice-item"><input type="radio" name="q15" value="under10"><span>Fewer than 10</span></label>
+              <label class="choice-item"><input type="radio" name="q15" value="10-30"><span>10–30</span></label>
+              <label class="choice-item"><input type="radio" name="q15" value="30-75"><span>30–75</span></label>
+              <label class="choice-item"><input type="radio" name="q15" value="over75"><span>More than 75</span></label>
             </div>
           </div>
 
@@ -822,15 +822,15 @@ footer strong { color: rgba(250,247,242,0.7); }
           <div class="field">
             <label>Which of the following have you experienced? Select all that apply. <span class="req">*</span></label>
             <div class="choice-group">
-              <label class="choice-item"><input type="checkbox" name="q17" value="comm-block"><label>The other parent controls or blocks communication about the child</label></label>
-              <label class="choice-item"><input type="checkbox" name="q17" value="unilateral"><label>The other parent makes major decisions without consulting me</label></label>
-              <label class="choice-item"><input type="checkbox" name="q17" value="excluded"><label>I have been excluded from school or medical information or appointments</label></label>
-              <label class="choice-item"><input type="checkbox" name="q17" value="repeated-motions"><label>The other parent has filed repeated motions or legal actions</label></label>
-              <label class="choice-item"><input type="checkbox" name="q17" value="false-reports"><label>The other parent has made unsubstantiated reports to CPS or police</label></label>
-              <label class="choice-item"><input type="checkbox" name="q17" value="child-distress"><label>The child has expressed fear, distress, or loyalty conflicts</label></label>
-              <label class="choice-item"><input type="checkbox" name="q17" value="financial"><label>The other parent uses financial pressure or withholds support</label></label>
-              <label class="choice-item"><input type="checkbox" name="q17" value="isolation"><label>I have been isolated from people who support me or the child</label></label>
-              <label class="choice-item"><input type="checkbox" name="q17" value="retaliation"><label>The other parent retaliates when I enforce boundaries or seek help</label></label>
+              <label class="choice-item"><input type="checkbox" name="q17" value="comm-block"><span>The other parent controls or blocks communication about the child</span></label>
+              <label class="choice-item"><input type="checkbox" name="q17" value="unilateral"><span>The other parent makes major decisions without consulting me</span></label>
+              <label class="choice-item"><input type="checkbox" name="q17" value="excluded"><span>I have been excluded from school or medical information or appointments</span></label>
+              <label class="choice-item"><input type="checkbox" name="q17" value="repeated-motions"><span>The other parent has filed repeated motions or legal actions</span></label>
+              <label class="choice-item"><input type="checkbox" name="q17" value="false-reports"><span>The other parent has made unsubstantiated reports to CPS or police</span></label>
+              <label class="choice-item"><input type="checkbox" name="q17" value="child-distress"><span>The child has expressed fear, distress, or loyalty conflicts</span></label>
+              <label class="choice-item"><input type="checkbox" name="q17" value="financial"><span>The other parent uses financial pressure or withholds support</span></label>
+              <label class="choice-item"><input type="checkbox" name="q17" value="isolation"><span>I have been isolated from people who support me or the child</span></label>
+              <label class="choice-item"><input type="checkbox" name="q17" value="retaliation"><span>The other parent retaliates when I enforce boundaries or seek help</span></label>
             </div>
           </div>
 
@@ -843,12 +843,12 @@ footer strong { color: rgba(250,247,242,0.7); }
             <label>Has domestic violence or coercive control been part of your situation? <span class="req">*</span></label>
             <div class="field-hint">This helps us apply the appropriate analytical framework. Not shared outside CFSP processing.</div>
             <div class="choice-group" style="margin-top:10px;">
-              <label class="choice-item"><input type="radio" name="q19" value="yes-doc-reported"><label>Yes — documented and reported</label></label>
-              <label class="choice-item"><input type="radio" name="q19" value="yes-doc-not-reported"><label>Yes — documented but not reported</label></label>
-              <label class="choice-item"><input type="radio" name="q19" value="yes-not-doc"><label>Yes — not documented</label></label>
-              <label class="choice-item"><input type="radio" name="q19" value="possibly"><label>Possibly — I'm not sure how to characterize it</label></label>
-              <label class="choice-item"><input type="radio" name="q19" value="no"><label>No</label></label>
-              <label class="choice-item"><input type="radio" name="q19" value="prefer-not"><label>I prefer not to answer</label></label>
+              <label class="choice-item"><input type="radio" name="q19" value="yes-doc-reported"><span>Yes — documented and reported</span></label>
+              <label class="choice-item"><input type="radio" name="q19" value="yes-doc-not-reported"><span>Yes — documented but not reported</span></label>
+              <label class="choice-item"><input type="radio" name="q19" value="yes-not-doc"><span>Yes — not documented</span></label>
+              <label class="choice-item"><input type="radio" name="q19" value="possibly"><span>Possibly — I'm not sure how to characterize it</span></label>
+              <label class="choice-item"><input type="radio" name="q19" value="no"><span>No</span></label>
+              <label class="choice-item"><input type="radio" name="q19" value="prefer-not"><span>I prefer not to answer</span></label>
             </div>
           </div>
         </div>
@@ -874,7 +874,7 @@ footer strong { color: rgba(250,247,242,0.7); }
               <p>I have read and agree to the Terms of Service above. I understand that CFSP is not a law firm, that nothing produced constitutes legal advice, and that all output should be reviewed with a licensed attorney before any use.</p>
               <label class="consent-check">
                 <input type="checkbox" id="q20">
-                <label for="q20">I agree to the Terms of Service</label>
+                <span>I agree to the Terms of Service</span>
               </label>
             </div>
           </div>
@@ -885,7 +885,7 @@ footer strong { color: rgba(250,247,242,0.7); }
               <p>I agree to allow my anonymized case data — with all identifying information removed — to contribute to CFSP's research on family court patterns and outcomes. This is entirely optional and does not affect the services I receive.</p>
               <label class="consent-check">
                 <input type="checkbox" id="q21">
-                <label for="q21">I agree to contribute anonymized data to CFSP research</label>
+                <span>I agree to contribute anonymized data to CFSP research</span>
               </label>
             </div>
           </div>
@@ -1149,4 +1149,3 @@ function showConfirmation() {
 // Init
 buildRoster();
 updateUI();
- 
